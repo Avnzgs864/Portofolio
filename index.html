@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refin Agus Saputra — Portofolio</title>
+  <meta name="description" content="Portofolio Refin Agus Saputra (124140126), Mahasiswa Teknik Informatika Institut Teknologi Sumatera.">
+  <meta property="og:title" content="Refin Agus Saputra — Portofolio">
+  <meta property="og:description" content="Mahasiswa Teknik Informatika ITERA — pengalaman, skill, proyek, dan galeri.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="home">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="dot"></span><span data-nav-name>Refin</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="pengalaman.html">Pengalaman</a>
+        <a href="skill.html">Skill</a>
+        <a href="proyek.html">Proyek</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" aria-label="Ganti tema">☀️</button>
+      </nav>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <section class="hero container hero-grid">
+    <div>
+      <span class="eyebrow">Portofolio · Teknik Informatika ITERA</span>
+      <p class="muted" style="margin:0">Halo, saya</p>
+      <h1 class="hero-title" id="hero-name">Refin Agus Saputra</h1>
+      <p class="text-soft" id="hero-tagline" style="font-size:20px;max-width:34em;"></p>
+      <div class="hero-actions">
+        <a id="btn-cv" class="btn btn-primary" href="#" download="cv-refin.pdf">⬇ Unduh CV</a>
+        <a class="btn btn-ghost" href="kontak.html">✉ Hubungi Saya</a>
+      </div>
+    </div>
+    <div class="hero-card center">
+      <div class="ring"></div>
+      <img id="hero-avatar" class="avatar-lg" src="" alt="Foto profil">
+    </div>
+  </section>
+
+  <main>
+    <section class="section container" id="sec-pengalaman">
+      <span class="eyebrow">Jelajahi</span>
+      <h2>Pengalaman Terbaru</h2>
+      <div class="grid grid-3" id="card-pengalaman"></div>
+      <p style="margin-top:22px"><a href="pengalaman.html" class="btn btn-ghost btn-sm">Lihat semua pengalaman →</a></p>
+    </section>
+
+    <section class="section container">
+      <span class="eyebrow">Keahlian</span>
+      <h2>Skill</h2>
+      <div class="grid grid-3" id="card-skill"></div>
+      <p style="margin-top:22px"><a href="skill.html" class="btn btn-ghost btn-sm">Semua skill →</a></p>
+    </section>
+
+    <section class="section container">
+      <span class="eyebrow">Karya</span>
+      <h2>Proyek Unggulan</h2>
+      <div class="grid grid-3" id="card-proyek"></div>
+      <p style="margin-top:22px"><a href="proyek.html" class="btn btn-ghost btn-sm">Semua proyek →</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot-inner">
+      <span class="muted">© <span id="foot-year"></span> <span data-nav-name></span> · Teknik Informatika ITERA</span>
+      <div class="foot-social" style="display:flex;gap:8px">
+        <a href="admin.html" class="pill">Admin CMS</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/seed.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

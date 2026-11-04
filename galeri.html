@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeri — Refin Agus Saputra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="galeri">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="dot"></span><span data-nav-name>Refin</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="pengalaman.html">Pengalaman</a>
+        <a href="skill.html">Skill</a>
+        <a href="proyek.html">Proyek</a>
+        <a href="galeri.html" class="active">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" aria-label="Ganti tema">☀️</button>
+      </nav>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="section container">
+    <span class="eyebrow">Dokumentasi</span>
+    <h1>Galeri Foto</h1>
+    <p class="muted">Grid responsif dengan lightbox — gunakan ←/→ untuk navigasi, Esc untuk tutup.</p>
+    <div class="gal-grid" style="margin-top:26px" id="gal-grid"></div>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Lihat foto">
+    <button class="lb-btn lb-close" aria-label="Tutup">✕</button>
+    <button class="lb-btn lb-prev" aria-label="Foto sebelumnya">‹</button>
+    <img id="lb-img" src="" alt="">
+    <button class="lb-btn lb-next" aria-label="Foto berikutnya">›</button>
+    <div class="lb-cap" id="lb-cap"></div>
+  </div>
+
+  <footer>
+    <div class="container foot-inner">
+      <span class="muted">© <span id="foot-year"></span> <span data-nav-name></span> · Teknik Informatika ITERA</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/seed.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

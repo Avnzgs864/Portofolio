@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pengalaman — Refin Agus Saputra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="pengalaman">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="dot"></span><span data-nav-name>Refin</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="pengalaman.html" class="active">Pengalaman</a>
+        <a href="skill.html">Skill</a>
+        <a href="proyek.html">Proyek</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" aria-label="Ganti tema">☀️</button>
+      </nav>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="section container" id="timeline-section">
+    <span class="eyebrow">Perjalanan</span>
+    <h1>Pengalaman</h1>
+    <p class="muted">Kronologis: magang, organisasi, proyek, dan lomba. Gunakan filter per tipe.</p>
+    <div class="filter-bar" id="filter-bar"></div>
+    <div class="timeline" id="timeline"></div>
+  </main>
+
+  <main class="container" id="detail-wrap" style="display:none"></main>
+
+  <footer>
+    <div class="container foot-inner">
+      <span class="muted">© <span id="foot-year"></span> <span data-nav-name></span> · Teknik Informatika ITERA</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/seed.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

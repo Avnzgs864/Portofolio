@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tentang — Refin Agus Saputra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body data-page="tentang">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><span class="dot"></span><span data-nav-name>Refin</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html" class="active">Tentang</a>
+        <a href="pengalaman.html">Pengalaman</a>
+        <a href="skill.html">Skill</a>
+        <a href="proyek.html">Proyek</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" aria-label="Ganti tema">☀️</button>
+      </nav>
+      <button class="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main class="section container">
+    <span class="eyebrow">Tentang Saya</span>
+    <h1>Kenalan dengan saya</h1>
+    <div class="grid grid-2" style="align-items:start;gap:36px">
+      <div>
+        <img id="tentang-avatar" class="avatar-lg" style="border-radius:var(--radius);width:min(320px,100%)" src="" alt="Foto profil">
+        <div id="tentang-social" style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap"></div>
+      </div>
+      <div>
+        <p class="text-soft" id="tentang-bio" style="font-size:18px"></p>
+        <div class="card" style="padding:20px;margin-top:18px" id="tentang-info"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container foot-inner">
+      <span class="muted">© <span id="foot-year"></span> <span data-nav-name></span> · Teknik Informatika ITERA</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/seed.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

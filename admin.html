@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin CMS — Portofolio Refin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body data-page="admin">
+
+  <!-- ==== LOGIN OVERLAY ==== -->
+  <div class="login-wrap" id="login-view">
+    <form class="login-box form" id="form-login">
+      <h2 style="text-align:center">🔐 Admin CMS</h2>
+      <p class="muted center" style="font-size:14px">Masuk untuk mengelola portofolio Refin Agus Saputra</p>
+      <label>Email
+        <input name="email" type="email" required autocomplete="username" placeholder="refin@itera.ac.id">
+      </label>
+      <label>Password
+        <input name="password" type="password" required autocomplete="current-password" placeholder="••••••••">
+      </label>
+      <button class="btn btn-primary" type="submit">Masuk →</button>
+      <p class="muted center" style="font-size:12px;margin:0">Demo: refin@itera.ac.id · refin124140126</p>
+    </form>
+  </div>
+
+  <!-- ==== SHELL ==== -->
+  <div class="admin-shell" id="admin-view" style="display:none">
+    <aside class="admin-side">
+      <a class="brand" href="index.html"><span class="dot"></span> Portofolio CMS</a>
+      <a href="#" data-tab="dash" class="active">📊 Dashboard</a>
+      <a href="#" data-tab="exp">🗂️ Pengalaman</a>
+      <a href="#" data-tab="skill">⚡ Skill</a>
+      <a href="#" data-tab="proj">🧩 Proyek</a>
+      <a href="#" data-tab="msg">📥 Pesan <span id="msg-badge" class="pill pill-solid" style="display:none;padding:1px 8px;font-size:11px"></span></a>
+      <a href="#" data-tab="profil">👤 Profil</a>
+      <a href="index.html" target="_blank" rel="noopener">🌐 Lihat Situs</a>
+      <a href="#" id="btn-logout">🚪 Keluar</a>
+    </aside>
+
+    <main class="admin-main">
+      <!-- DASHBOARD -->
+      <section data-view="dash">
+        <div class="admin-top"><h1 style="margin:0">Dashboard</h1></div>
+        <div class="stats" id="stats"></div>
+        <p class="muted">Semua perubahan otomatis tersimpan di browser (localStorage) dan langsung tampil di situs publik.</p>
+      </section>
+
+      <!-- PENGALAMAN -->
+      <section data-view="exp" hidden>
+        <div class="admin-top">
+          <h1 style="margin:0">Kelola Pengalaman</h1>
+          <button class="btn btn-primary" data-act="new-exp">+ Pengalaman Baru</button>
+        </div>
+        <div id="exp-list"></div>
+      </section>
+
+      <!-- SKILL -->
+      <section data-view="skill" hidden>
+        <div class="admin-top">
+          <h1 style="margin:0">Kelola Skill</h1>
+          <button class="btn btn-primary" data-act="new-skill">+ Skill Baru</button>
+        </div>
+        <div id="skill-list"></div>
+      </section>
+
+      <!-- PROYEK -->
+      <section data-view="proj" hidden>
+        <div class="admin-top">
+          <h1 style="margin:0">Kelola Proyek</h1>
+          <button class="btn btn-primary" data-act="new-proj">+ Proyek Baru</button>
+        </div>
+        <div id="proj-list"></div>
+      </section>
+
+      <!-- PESAN -->
+      <section data-view="msg" hidden>
+        <div class="admin-top"><h1 style="margin:0">Pesan Masuk</h1></div>
+        <div class="card" id="msg-list"></div>
+      </section>
+
+      <!-- PROFIL -->
+      <section data-view="profil" hidden>
+        <div class="admin-top"><h1 style="margin:0">Pengaturan Profil</h1></div>
+        <form class="form card" style="padding:24px" id="form-profil">
+          <div class="grid-form">
+            <label>Nama
+              <input name="name" type="text" required>
+            </label>
+            <label>NIM
+              <input name="nim" type="text">
+            </label>
+            <label class="full">Tagline
+              <input name="tagline" type="text">
+            </label>
+            <label class="full">Bio
+              <textarea name="bio"></textarea>
+            </label>
+            <label>Email
+              <input name="email" type="email">
+            </label>
+            <label>Lokasi
+              <input name="location" type="text">
+            </label>
+            <label>Link GitHub
+              <input name="github" type="url" placeholder="https://github.com/username">
+            </label>
+            <label>Link LinkedIn
+              <input name="linkedin" type="url" placeholder="https://linkedin.com/in/username">
+            </label>
+            <label>Link Instagram
+              <input name="instagram" type="url" placeholder="https://instagram.com/username">
+            </label>
+            <label>Foto Profil (JPG/PNG/WebP)
+              <input name="avatar_file" type="file" accept="image/*">
+            </label>
+            <label>CV (PDF) — tombol Unduh CV
+              <input name="cv_file" type="file" accept="application/pdf">
+            </label>
+          </div>
+          <button class="btn btn-primary" type="submit">💾 Simpan Profil</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- ==== MODAL ==== -->
+  <div class="modal" id="modal">
+    <div class="modal-box" id="modal-box"></div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/seed.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
